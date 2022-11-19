@@ -1,0 +1,161 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Arpon Kapuria}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{website.com}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://website.com}
+\newcommand{\yourEmail}{arpkapuria@gmail.com}
+\newcommand{\yourPhone}{+91 8015845227}
+\newcommand{\githubUserName}{aaaaarrp}
+\newcommand{\linkedInUserName}{arponkapuria}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{B.Tech in Computer Science and Engineering }{National Institute of Technology, Tiruchirappalli}{Tamil Nadu, IN}{December 2020 - Present}
+
+\ExpectedGraduationDate{Expected Graduation Date: July 2024}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Experience}
+\resumeHeading{Mir Zahid Art School}{Art Instructor}{Kushtia, BD}{June 2018 – November 2018}
+\begin{bullets}
+    \item Taught pre-teen students on weekend art classes. Helped around 50 students in developing pastel drawing skill.
+\end{bullets}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+\projectHeading{Smart Home Management Suite}{}{September 2022 - Present}
+\begin{bullets}
+    \item Developed a flutter app to manage smart home automation across 4 clusters, each having 15 homes in Assam, India.\\
+    \item Created both admin portal and user side for controlling electronic devices such as lights, fans, etc.\\
+    \item Used the MQTT server for IoT communication and integrated flutter frontend with API integrated in Django by another teammate.\\
+    \item Parsed energy metre data to generate bills and made summary reports in the admin dashboard.\\
+\end{bullets}
+\sectionsep
+  
+\projectHeading{Malicious Website Detection Using Machine Learning}{}{October 2022 - November 2022}
+\begin{bullets}
+    \item Implemented a machine-learning model with MLP algorithm to detect malicious websites using tensorflow.
+    \item Built a chrome extension to extract the features from the webpage to test the website against the trained model to classify if it is malicious or not.
+    \item Added a feature in the extension to get user feedback, in case the classification is wrong and used a continual learning approach to store the data and retrain the model daily to improve the model’s performance.
+\end{bullets}
+\sectionsep
+
+\projectHeading{Fruit Ninja Clone}{}{October 2022}
+\begin{bullets}
+    \item Made this 2D game with Unity and C#. It is a clone of the famous mobile game Fruit Ninja developed by Halfbrick Studios.
+    \item In Fruit Ninja, the player slices fruits with a blade controlled via the touch screen. In my clone version, Instead of touching, one can use a mouse to move the blade to slice the fruits. We can see the points on the screen after every slicing.
+\end{bullets}
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+%     \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{C, C++, Python, Dart} \\
+    \singleItem{Web Development:}{JavaScript, HTML, CSS} \\
+    \singleItem{Database:}{MySQL} \\
+    \singleItem{Framework:}{Flutter, Tailwind CSS, TensorFlow} \\
+    \singleItem{Game Development:}{Unity, C\#} \\
+    \singleItem{Others:}{Git, Docker, MS Office, \LaTeX}
+\end{skillList}
+\sectionsep
+
+
+
+%--------------------------------------------------------------
+%     Achievements
+%--------------------------------------------------------------
+
+\section{Achievements}
+\begin{bullets}
+    \item \textbf{2020} Indian Council for Cultural Relationship (ICCR) scholarship awardee – selected as one of the 200 students receiving this scholarship from Bangladesh by the Govt. of India.
+    \item \textbf{2017} Merit Order Scholarship from the Chamber of Commerce, Kushtia, Bangladesh because of the excellent performance in 10th board exam.
+    \item \textbf{2015} Received General Grade Scholarship from the Govt. of Bangladesh in the 8th board exam.
+    \item Won multiple prizes in art competitions organized by: \textbf{Bangladesh Udichi Shilpigoshthi}, \textbf{Zilla Shilpokola Academy, Kushtia}, \textbf{Bangladesh Shishu Academy} and \textbf{Inter-School} cultural fests in Bangladesh.
+\end{bullets}
+\sectionsep
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
