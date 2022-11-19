@@ -1,4 +1,3 @@
-This is just a template, I encourage you to modify it if you don't like how something looks. For example,  you can change the fonts to something you like better. Or, add bullet points to the project section.
+This is just a template, I encourage you to modify it if you don't like how something looks. For example, you can change the fonts to something you like better. Or, add bullet points to the project section.
 
-Collected from:
-` GitHub: https://github.com/Aarif123456/modern-deedy `
+Collected from: [https://github.com/Aarif123456/modern-deedy](https://github.com/Aarif123456/modern-deedy)
